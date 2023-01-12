@@ -1,0 +1,28 @@
+.wrapper{
+ height: 500px;
+ width: 600px;
+ border: 1px solid black;
+ display: flex;
+ flex-direction: column;
+ /* justify-content: center; */
+ align-items: flex-end;
+ flex-flow: nowrap;
+}
+
+.item1, .item2, .item3{
+ height: 100px;
+ width: 100px;
+}
+.item1{
+ background-color: aqua;
+ order: 3;
+}
+.item2{
+ background-color: red;
+ flex-grow: 1; 
+}
+.item3{
+ background-color: blueviolet;
+ /* flex-basis: 500px; */
+ flex-grow: 2;
+}
