@@ -21,7 +21,6 @@
   height: 90%;
   width: 80%;
   display: grid;
-  border: 2px solid red;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
@@ -85,6 +84,9 @@ img {
   display: flex;
   grid-area: two;
   flex-direction: column-reverse;
+}
+.two-content h3{
+ font-size: 18px;
 }
 .title {
   display: flex;
