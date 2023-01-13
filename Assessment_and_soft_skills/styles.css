@@ -1,21 +1,20 @@
-*{
- padding: 0;
- margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-@font-face{
+@font-face {
   font-family: "Rubik";
   src: url(https://fonts.google.com/specimen/Rubik);
 }
 
-
-.container{
+.container {
   width: 98vw;
   height: 98vh;
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: hsl(226, 43%, 10%);  
-  font-family: "Rubik",Arial,san-serif;
+  background-color: hsl(226, 43%, 10%);
+  font-family: "Rubik", Arial, san-serif;
 }
 
 .content {
@@ -30,129 +29,115 @@
     "one two three four "
     "one five six seven";
 }
-.one{
- background-color: hsl(235, 46%, 20%);
- border-radius: 20px;
- grid-area: one;
- display: flex;
- flex-direction: column;
+.one {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 20px;
+  grid-area: one;
+  display: flex;
+  flex-direction: column;
+}
+.profile {
+  background-color: hsl(264, 64%, 52%);
+  border-radius: 20px;
+  height: 70%;
+  padding: 20px 20px;
+}
+img {
+  height: 20%;
+  border: 2px solid white;
+  border-radius: 50px;
+}
+.profile h3 {
+  color: hsl(235, 45%, 61%);
+  font-size: 18px;
+  padding-top: 40px;
+}
+.profile p {
+  color: white;
+  font-size: 40px;
+  padding-top: 10px;
+}
+.time-dy {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: hsl(236, 100%, 87%);
+  padding-bottom: 30px;
+}
 
-}
-.profile{
- background-color: hsl(264, 64%, 52%);
- border-radius: 20px;
- height: 70%;
-}
-.profile h3{
- color: hsl(235, 45%, 61%);
-}
-.profile p{
- color: white;
- font-size: 25px;
-}
-.time-dy{
- padding: 20px 20px;
- display: flex;
- flex-direction: column;
- gap: 20px;
- color: white;
+.two-content,
+.three-content,
+.four-content,
+.five-content,
+.six-content,
+.seven-content {
+  height: 80%;
+  width: 100%;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 20px;
+  color: white;
 }
 
-.two{
- background-color: hsl(15, 100%, 70%);
- border-radius: 20px;
- display: flex;
- grid-area: two;
- flex-direction: column-reverse;
+.two {
+  background-color: hsl(15, 100%, 70%);
+  border-radius: 20px;
+  display: flex;
+  grid-area: two;
+  flex-direction: column-reverse;
 }
-.title{ 
+.title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
+  padding: 20px;
 }
-.title span{
- font-size: 50px;
-}
-.two-content{
- height: 80%;
- width: 100%;
- background-color: hsl(235, 46%, 20%);
- border-radius: 20px;
-
-}
-.three{
- background-color: hsl(195, 74%, 62%);
- border-radius: 20px;
- display: flex;
- flex-direction: column-reverse;
-
- grid-area: three;
-
-}
-.three-content{
- height: 80%;
- background-color: hsl(235, 46%, 20%);
- border-radius: 20px;
-
-}
-.four{
- background-color: hsl(348, 100%, 68%);
- border-radius: 20px;
- display: flex;
- flex-direction: column-reverse;
-
- grid-area: four;
-
-}
-.four-content{
- height: 80%;
- background-color: hsl(235, 46%, 20%);
- border-radius: 20px;
-
-}
-.five{
- background-color: hsl(145, 58%, 55%);
- border-radius: 20px;
- display: flex;
- flex-direction: column-reverse;
-
- grid-area: five;
-
-}
-.five-content{
- height: 80%;
- background-color: hsl(235, 46%, 20%);
- border-radius: 20px;
-
-}
-.six{
- background-color: hsl(264, 64%, 52%);
- border-radius: 20px;
- display: flex;
- flex-direction: column-reverse;
- 
- grid-area: six;
-
-}
-.six-content{
- height: 80%;
- background-color: hsl(235, 46%, 20%);
- border-radius: 20px;
-
-}
-.seven{
- background-color: hsl(43, 84%, 65%);
- border-radius: 20px;
- display: flex;
- flex-direction: column-reverse;
- 
- grid-area: seven;
-}
-.seven-content{
- height: 80%;
- background-color: hsl(235, 46%, 20%);
- border-radius: 20px;
-
+.title span {
+  font-size: 50px;
 }
 
+.three {
+  background-color: hsl(195, 74%, 62%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  grid-area: three;
+}
+
+.four {
+  background-color: hsl(348, 100%, 68%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  grid-area: four;
+}
+
+.five {
+  background-color: hsl(145, 58%, 55%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  grid-area: five;
+}
+
+.six {
+  background-color: hsl(264, 64%, 52%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  grid-area: six;
+}
+
+.seven {
+  background-color: hsl(43, 84%, 65%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  grid-area: seven;
+}
