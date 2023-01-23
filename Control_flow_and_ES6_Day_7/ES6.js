@@ -36,7 +36,7 @@ let person={
 }
 
 // Traditional way of accessing the properties of the objects
-console.log(person['parent'].mother);
+// console.log(person['parent'].mother);
 
 // Applying destructuring
 // let {parent}=person
@@ -57,11 +57,15 @@ console.log(person['parent'].mother);
 // console.log(q,r);
 
 // Rest operator to reassign array elements (...)rest operator assigns the other variables to the rest variable
-let[q,r, ...rest] = [1,2,3,4,5,6]
-console.log(q,r);
-console.log(rest);
+// let[q,r, ...rest] = [1,2,3,4,5,6]
+// console.log(q,r);
+// console.log(rest);
 
-let num1=[1,2,3,4,5,6]
-let num=[100,12,45,...num1]
-console.log(num);
+// let num1=[1,2,3,4,5,6]
+// let num=[100,12,45,...num1]
+// console.log(num);
 
+
+let names = ["Piera", "Jesse", "Ken", "John"]
+let [one, ,three]=names
+console.log(one,three);

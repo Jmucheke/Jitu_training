@@ -23,7 +23,10 @@ let  test ={
   }
 
 // Method 1
-let {address:{geo:{lat,lng}}}=test
+// let {address:{geo:{lat,lng}}}=test
+// console.log(lat);
+
+let {lat}= test.address.geo
 console.log(lat);
 
 // Method 1
