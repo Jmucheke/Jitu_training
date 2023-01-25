@@ -3,81 +3,103 @@
 }
 
 .container {
-  background:hsl(202, 87%, 54%);
-  padding:25px;
-  max-width:760px;
-  margin:25px auto;
-  overflow:hidden;
-  border-radius:10px;
-  border:4px solid #b1c9bb;
+  background: hsl(202, 87%, 54%);
+  padding: 25px;
+  max-width: 760px;
+  margin: 25px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid #b1c9bb;
   font-family: sans-serif;
 }
 
-h1, h2 {
-  margin:0;
-  text-align:center;
-  text-transform:uppercase;
- 
+h1,
+h2 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+
 }
 
 h2 {
-  font-size:20px;
-  text-align:center;
-  border-bottom:1px solid #b1c9bb;
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid hsl(202, 87%, 54%);
   padding: 0 0 10px;
-  color:#57635c;
+  color: #57635c;
 }
 
 .new-task-container {
-  text-align:center;  
+  text-align: center;
 }
-.form-container{
- display: flex;
- justify-content: center;
- 
+
+.form-container {
+  display: flex;
+  justify-content: center;
+
 }
-.form-group{
- display: flex;
+
+.form-group {
+  display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
 }
-.input-group{
- font-size: 18px;
+
+.input-group {
+  font-size: 18px;
+}
+
+.input-group input {
+  border: 1px solid hsl(202, 87%, 54%);
+  border-radius: 10px;
+  /* border: none; */
+  /* color: white; */
+  padding: 10px;
+  outline: none;
 }
 
 .box {
-  padding:10px 15px;
+  padding: 10px 15px;
   width: fit-content;
-  border:2px solid #b1c9bb;
-  border-radius:5px;
-  background:#FFF;
-  margin:15px 0;
+  border: 2px solid #b1c9bb;
+  border-radius: 5px;
+  background: #FFF;
+  margin: 15px 0;
+}
+#addTask{
+  background-color: hsl(202, 87%, 54%);
+    border-radius: 10px;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 10px;
 }
 
 .todo-list {
-  float:left;
-  width:46%;
+  float: left;
+  width: 46%;
 }
 
 .complete-list {
-  float:right;
-  width:46%;
+  float: right;
+  width: 46%;
 }
 
 ul {
-  list-style:none;
-  padding:0;
-  margin:0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-li{
-  padding:10px;
-  border-bottom:1px dotted #CCC;
+li {
+  padding: 10px;
+  border-bottom: 1px dotted #CCC;
 }
 
 .delete {
-  float:right;
+  float: right;
 }

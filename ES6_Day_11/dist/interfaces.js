@@ -24,29 +24,29 @@
 //  }
 // }
 // Weak Map
-// Example 1
-const x = new WeakMap();
-class Lorry {
-    constructor(name) {
-        this.name = '';
-        x.set(this, name);
-    }
-    get myname() {
-        return x.get(this);
-    }
-}
-let l = new Lorry('Mercedes Benz');
-console.log(x);
-// Example 2
-let _mileage = new WeakMap();
-class Car {
-    constractor(color) {
-        // this.color = color
-        _mileage.set(this, color);
-    }
-    hooting() {
-        console.log(`${_mileage.get(this)}`);
-    }
-}
-let obj = new Car();
-console.log();
+// // Example 1
+// const x = new WeakMap()
+// class Lorry{
+//  name=''
+//  constructor(name:string){
+//   x.set(this, name)
+//  }
+//  get myname(){
+//   return x.get(this)
+//  }
+// }
+// let l = new Lorry('Mercedes Benz')
+// console.log(x);
+// // Example 2
+// let _mileage = new WeakMap()
+// class Car{
+//  constractor(color:string){
+//   // this.color = color
+//   _mileage.set(this,color)
+//  }
+//  hooting(){
+//   console.log(`${_mileage.get(this)}`);
+//  }
+// }
+// let obj = new Car()
+// console.log();
