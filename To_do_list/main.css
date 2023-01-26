@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav button{
+    background-color: hsl(202, 87%, 54%);
+    border-radius: 10px;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+form h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid hsl(202, 87%, 54%);
+}
+form input{
+    border-radius: 10px;
+    border: 2px solid hsl(202, 87%, 54%);
+    height: 3rem;
+    width: 300px;
+    outline: none;
+
+}
+form button {
+    background-color: hsl(202, 87%, 54%);
+    border-radius: 10px;
+    height: 3rem;
+    border: none;
+    color: white;
+}
+.to-do-container button{
+    background-color: hsl(202, 87%, 54%);
+    border-radius: 10px;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    color: white;
+}
+
+nav{
+    display: flex;
+    padding: 20px;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+
+}
+nav ul li{
+    list-style: none;
+    width: 100px;
+
+}
+
+.to-do-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.to-do-container h2{
+    font-size: 40px;
+
+}
+.to-do-container p{
+    font-size: 18px;
+
+}
+
+/* #editForm{
+    display: none;
+} */
+button ion-icon{
+    color: white;
+}
