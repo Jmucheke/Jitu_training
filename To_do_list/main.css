@@ -89,9 +89,12 @@ nav ul li{
 
 }
 
-/* #editForm{
-    display: none;
-} */
+#editForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 button ion-icon{
     color: white;
 }

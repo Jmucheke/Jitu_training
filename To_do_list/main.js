@@ -143,7 +143,7 @@ function deleteTask(id) {
 // Update
 
 let updateTask = (id) => {
-    editForm.style.display = 'block';
+    editForm.style.display = 'flex';
     form.style.display = 'none'
     toDoContainer.style.display = 'none'
     headingEmpty.style.display = 'none'
