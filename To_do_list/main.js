@@ -152,8 +152,8 @@ let updateTask = (id) => {
     editForm.description.value = todo.description;
     editForm.date.value = todo.date;
     editForm.id.value = todo.id;
-    editForm.style.display = 'block';
-    form.style.display = 'none';
+    editForm.style.display = 'flex';
+    form.style.visbility = 'visible';
 };
 
 // allToDo.addEventListener('click', () => {
@@ -217,7 +217,7 @@ completed.addEventListener('click', () => {
         editForm.style.display = 'none';
 
         headingEmpty.style.display = 'block'
-        headingEmpty.innerText = "No completed to do"
+        headingEmpty.innerText = "No completed Todo"
     }
 })
 incomplete.addEventListener('click', () => {
@@ -248,7 +248,7 @@ incomplete.addEventListener('click', () => {
 
         toDoContainer.style.display = 'none'
         headingEmpty.style.display = 'block'
-        headingEmpty.innerText = "No incomplete to do"
+        headingEmpty.innerText = "No incomplete Todo"
     }
 })
 
@@ -268,14 +268,11 @@ let complete = (id) => {
     if (todo.completed) {
         todo.completed = false
         console.log(todo)
-        showcomplete()
         displayToDo()
     } else {
         todo.completed = true
         console.log(todo)
         showcomplete()
-        displayToDo()
     }
-    countTask()
 }
 

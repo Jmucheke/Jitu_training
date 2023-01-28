@@ -1,53 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
     <div class="container">
-        <nav>
-            <ul>
-                <li><button id="add-to-do">Add to do</button></li>
-                <li><button id="completed">Completed</button></li>
-                <li><button id="incomplete">Incomplete</button></li>
-            </ul>
+      
+      <div class="header">
+        <h3>Welcome to My Todo App</h3>
+        
+        <nav>          
+          <ul>
+            <li><button id="add-to-do">Add to do</button></li>
+            <li><button id="completed">Completed</button></li>
+            <li><button id="incomplete">Incomplete</button></li>
+          </ul>
         </nav>
-        <div class="to-do-container">
+      </div>
+      <div class="content">
+          <div class="to-do-container"></div>
 
-            
-
-        </div>
         <h2>Your to do is empty</h2>
-        <form >
-            <h2>Add Your tasks here</h2>
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" required>
-            <label for="description">Description</label>
-            <input type="text" name="description" id="description" required>
-            <label for="date">Date</label>
-            <input type="date" name="date" id="date" required>
-            <button>Submit</button>
+        <form>
+          <h2>Add Your tasks here</h2>
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" required />
+          <label for="description">Description</label>
+          <input type="text" name="description" id="description" required />
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" required />
+          <button>Submit</button>
         </form>
         <form id="editForm">
-            <h2>Edit Your to do here</h2>
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" required>
-            <label for="description">Description</label>
-            <input type="text" name="description" id="description" required>
-            <label for="date">Date</label>
-            <input type="date" name="date" id="date" required>
-            <input type="text" id="id" name="id" hidden>
-            <button>Submit</button>
+          <h2>Edit Your to do here</h2>
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" required />
+          <label for="description">Description</label>
+          <input type="text" name="description" id="description" required />
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" required />
+          <input type="text" id="id" name="id" hidden />
+          <button>Submit</button>
         </form>
+      </div>
     </div>
     <script src="main.js" defer></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
