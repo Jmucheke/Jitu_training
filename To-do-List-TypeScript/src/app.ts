@@ -96,10 +96,11 @@ function showtodos(){
     <div class="btn">
      <button onclick="updateTodo(${todo.id})">Update</button>
      <button onclick="deleteTodo(${todo.id})">Delete</button>
+     <button onclick="()">Delete</button>
      <button>Complete</button>
     </div>
    `
-
+   
    uncompleted.innerHTML += html
   })
  }
@@ -107,6 +108,11 @@ function showtodos(){
 
 }
 showtodos()
+
+function dummy(){
+ console.log("");
+ 
+}
 
 function deleteTodo(id:number){
  const index = Todos.findIndex(todo=>todo.id===id)

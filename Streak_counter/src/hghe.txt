@@ -1,0 +1,142 @@
+import MyStreakClass from "./classes/streakClass.js";
+import myTaskClass from "./classes/myTaskClass.js";
+
+let btn_close_form = document.getElementById("btn-close-form")! as HTMLInputElement;
+let btn_open_form = document.getElementById("btn-open-form")! as HTMLInputElement;
+let task_form = document.querySelector(".task-form")! as HTMLDivElement;
+
+
+let myname = document.getElementById("taskName")! as HTMLInputElement;
+let myimage = document.getElementById("image")! as HTMLInputElement;
+let date = document.getElementById("date")! as HTMLInputElement;
+const addTask = document.getElementById('btn-add-task')! as HTMLInputElement
+const form = document.getElementById('myform')! as HTMLFormElement
+
+const displayTask = document.getElementById('display-task')! as HTMLDivElement
+const errorMessage = document.querySelector('.error-message')! as HTMLDivElement
+
+let modal = document.getElementById("myModal")! as HTMLDivElement;
+
+// Get the button that opens the modal
+let openModal = document.getElementById("myBtn")! as HTMLButtonElement;
+let closeModal = document.getElementById("btn-close-modal")! as HTMLButtonElement;
+
+
+btn_close_form.addEventListener('click', (e) => {
+        e.preventDefault()
+        task_form.style.display = "none"
+        displayTask.style.display = "flex"
+
+})
+btn_open_form.addEventListener('click', (e) => {
+        e.preventDefault()
+        task_form.style.display = "flex"
+        displayTask.style.display = "none"
+})
+
+
+
+let MyStreakClass1 = new MyStreakClass()
+
+addTask.addEventListener('click', (e) => {
+        e.preventDefault()
+        let myName = form.taskName.value
+        let myImage = form.image.value
+        let mydate = form.date.value
+        if (myName == '' || myImage == '' || mydate == '') {
+
+                const p = document.createElement('p')
+                p.textContent = 'Please fill in all Fields'
+                p.style.color = 'red'
+                p.id = 'error-message'
+                errorMessage.insertAdjacentElement('afterbegin', p)
+
+
+                setTimeout(() => {
+                        p.style.display = 'none'
+                }, 5000)
+        } else {
+                let Task1 = new myTaskClass(myName, myImage, mydate)
+
+                MyStreakClass1.TaskArray.push(Task1)
+                task_form.style.display = "none"
+                displayTask.style.display = "flex"
+                form.reset()
+                taskDisplay()
+        }
+})
+
+
+function taskDisplay() {
+        if (MyStreakClass1.TaskArray.length == 0) {
+                displayTask.innerHTML = " "
+                const p = document.createElement('p')
+                p.textContent = 'Wow such Empty, Add Todo!!'
+                p.style.color = 'black'
+                displayTask.insertAdjacentElement('afterbegin', p)
+                
+        } else {
+                displayTask.innerHTML = " "
+                MyStreakClass1.TaskArray.map(tasks => {
+                let html = `
+                <div  onclick="showModal(${tasks.id} class="task-1">
+                        <img src="${tasks.image}"></img>
+                        <p>${tasks.date}</p>
+                        <p>${tasks.task}</p>
+                </div>`
+                displayTask.innerHTML += html
+                        
+                        
+        })}}
+
+
+
+let modalContent = document.querySelector(".modal-content")! as HTMLDivElement;
+
+const showModal = (id: number) => {
+        let task = MyStreakClass1.TaskArray.find((tasks) => tasks.id == id);
+        modalContent.innerHTML = "";
+        modal.style.display = "flex";
+        // <p class="days" > Days: ${ Days.create(task!).getDays() } </p>
+        let singleTaskTemplate = `
+    <div class="modal-section">
+        <img src="${task?.image}" alt="task">
+        <p class="date">${task?.date}</p>
+        
+        <!-- task name -->
+        <p class="task-name">${task!.task}</p>
+        <div class="modal-btn">
+        <button id="btn-close-modal" onclick="let modal = document.querySelector('#my-modal');modal.style.display = 'none'">Close</button>
+            <button onclick="deleteTask(${task!.id}")>Delete</button>
+        </div>
+    </div>`
+}
+function deleteTask(id: number) {
+        const index = MyStreakClass1.TaskArray.findIndex(tasks => tasks.id === id)
+        MyStreakClass1.TaskArray.splice(index, 1)
+        taskDisplay()
+}
+// Modal class start
+
+// When the user clicks the button, open the modal 
+openModal.onclick = function () {
+        modal.style.display = "block";
+        console.log("clicked");
+        
+}
+
+closeModal.onclick = function () {
+        modal.style.display = "none";
+}
+
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+// window.onclick = function (event) {
+//  if (event.target == modal) {
+//   modal.style.display = "none";
+//  }
+// }
+
+// Modal class end

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="styles.css">
+   <title>Streak Counter</title>
+</head>
+
+<body>
+   <div class="container">
+      <header>
+         <h1>Streak Counter</h1>
+      </header>
+
+      <div class="content">
+         <!-- Streak counter start -->
+         <div class="section-1">
+            <div class="btn-add">
+               <button id="btn-open-form"><ion-icon name="add-circle-outline"></ion-icon></button>
+            </div>
+            <div class="task-img"><img src="./Images/demo2-with-watch.png" alt="task"></div>
+            <div class="head-msg">
+               <h1>Welcome to My Streak Counter</h1>
+            </div>
+         </div>
+         <!-- Streak counter end -->
+
+
+         <!-- Task Form start -->
+         <div class="task-form">
+            <div class="close-form">
+               <button id="btn-close-form"><ion-icon name="close-circle-outline"></ion-icon></button>
+            </div>
+            <div class="todo-here">
+               <ion-icon name="list-outline"></ion-icon>
+               <p>Add A Todo Here</p>
+            </div>
+            <div class="form-group">
+               <form id="myform">
+                  <div class="error-message">
+                     <!-- <h3>Please fill in the form</h3> -->
+                  </div>
+                  <div class="please-add">
+                     <h2>Please Add A task</h2>
+                  </div>
+                  <div class="input-group">
+                     <label for="taskname">Task Name</label>
+                     <input type="text" name="taskname" id="taskName" required />
+                  </div>
+                  <div class="input-group">
+                     <label for="taskimage">Image</label>
+                     <input type="url" name="image" id="image" required />
+                  </div>
+                  <div class="input-group">
+                     <label for="date">Date</label>
+                     <input type="date" name="date" id="date" required />
+                  </div>
+                  <div class="btn-add-submit">
+                     <button id="btn-add-task">Add Task</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <!-- Task Form end -->
+      </div>
+
+      <!-- Display task start -->
+      <div class="display-task" id="display-task">
+         <!-- <div class="myBtn">
+            <div id="myBtn" class="task-1">
+               <img
+                  src="https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                  name="logo-no-smoking"></img>
+               <p>2023-06-07</p>
+               <p>Smoking</p>
+            </div>
+         </div> -->
+      </div>
+      <!-- Display tasks end -->
+
+      <!-- Modal class Start -->
+      <div id="myModal" class="modal">
+         <div class="modal-content">
+            <!-- <span class="close">&times;</span> -->
+            <div class="modal-section">
+               <img
+                  src="https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                  name="logo-no-smoking"></img>
+               <p>2023-06-07</p>
+               <p>Smoking</p>
+               <p>Smoking</p>
+               <div class="btn-tasks">
+                  <button id="btn-close-modal">Close</button>
+                  <button id="btn-delete-modal">Delete</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal class end -->
+
+
+   </div>
+   </div>
+   <!-- <script>var exports = {}</script> -->
+   <script type="module" src="./dist/app.js" defer></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

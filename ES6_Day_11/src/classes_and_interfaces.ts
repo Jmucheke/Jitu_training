@@ -154,10 +154,11 @@ class Car extends  Vehicle{
  // constructor(public name:string){
  //  super()
  // }
- name:string=''
- private constructor(name:string){
+ // name:string=''
+ private constructor(age:number){
   super()
-  this.name=name
+  // this.name=""
+  // this.age=age
    
   }
   
